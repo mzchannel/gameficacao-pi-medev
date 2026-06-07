@@ -415,10 +415,13 @@ def casaTabClick(casaTab):
                 descCasa = x[1]
 
                 i = SQL.retrieveTarefa(idCasa, curso)
-                idTarefa = i[0]
-                descTarefaAluno = i[1]
-                dataEntregaTarefa = i[2]
-                audio.playSeta()
+                if i[0] != None:
+                    idTarefa = i[0]
+                    descTarefaAluno = i[1]
+                    dataEntregaTarefa = i[2]
+                    audio.playSeta()
+                else:
+                    audio.playErro()
         else:            
             if casaTab.trava == 0:
                 SQL.mudarLibCasa(1, idCasa)
