@@ -84,20 +84,6 @@ CREATE TABLE progresso (
     FOREIGN KEY (id_casa) REFERENCES casas(id_casa) ON DELETE RESTRICT
 );
 
--- 9. entrega_tarefas
-CREATE TABLE entrega_tarefas (
-    id_entrega INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    id_tarefa INT NOT NULL,
-    id_usuario INT NOT NULL,
-    resposta TEXT,
-    arquivo_resposta VARCHAR(255),
-    nota FLOAT,
-    status VARCHAR(45),
-    data_entrega DATETIME,
-    FOREIGN KEY (id_tarefa) REFERENCES tarefas(id_tarefa) ON DELETE RESTRICT,
-    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE RESTRICT
-);
-
 CREATE TABLE respostas (
 	id_resposta INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_aluno INT NOT NULL,
@@ -182,5 +168,3 @@ VALUES
 ('Vendendo Soluções', 'Tente vender o seu produto!', 1),
 ('Cápsula do Tempo', 'O que aprendi que não devo fazer?', 1)
 ;
-
-SELECT * FROM usuarios; SELECT * FROM cursos; SELECT * FROM alunos; SELECT * FROM casas;
