@@ -403,8 +403,6 @@ def casaTabClick(casaTab):
     if casaTab.entrar():
         global janelaNumber, idCasa, nomeCasa, descCasa
         global curso, idTarefa, descTarefaAluno, dataEntregaTarefa
-        
-        print(casaTab.tarefaData)
 
         idCasa = casaTab.casaNumero
 
