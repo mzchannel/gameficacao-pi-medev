@@ -292,8 +292,8 @@ def menuLat():
     imagemMaua.criarImagem(janela, 55, 55)
 
     if isProfessor == 0:
-        textoLoginReq.gerarTexto("Tabuleiro", janela, 55, 180, (0, 69, 135))
-        textoLoginReq.gerarTexto("Perfil", janela, 55, 280, (0, 69, 135))
+        textoLoginReq.gerarTexto("Tabuleiro", janela, 55, 190, (0, 69, 135))
+        textoLoginReq.gerarTexto("Perfil", janela, 55, 290, (0, 69, 135))
 
     # botões menu aluno
         if janelaNumber == 2:
@@ -306,9 +306,9 @@ def menuLat():
             botaoTabuleiroFora.draw(janela)
             botaoPerfilFora.draw(janela)
     else:
-        textoLoginReq.gerarTexto("Tabuleiro", janela, 55, 180, (0, 69, 135))
-        textoLoginReq.gerarTexto("Tarefas", janela, 55, 280, (0, 69, 135))
-        textoLoginReq.gerarTexto("Aluno", janela, 55, 380, (0, 69, 135))
+        textoLoginReq.gerarTexto("Tabuleiro", janela, 55, 190, (0, 69, 135))
+        textoLoginReq.gerarTexto("Tarefas", janela, 55, 290, (0, 69, 135))
+        textoLoginReq.gerarTexto("Aluno", janela, 55, 390, (0, 69, 135))
         if janelaNumber == 2:
             botaoTabuleiro.draw(janela)
             botaoTarefaFora.draw(janela)
@@ -408,20 +408,22 @@ def casaTabClick(casaTab):
 
         if isProfessor == 0:
             if casaTab.trava == 0:
-                janelaNumber = 4
-                
                 x = SQL.retrieveCasa(idCasa)
                 nomeCasa = x[0]
                 descCasa = x[1]
 
                 i = SQL.retrieveTarefa(idCasa, curso)
-                if i[0] != None:
+                if i != None:
                     idTarefa = i[0]
                     descTarefaAluno = i[1]
                     dataEntregaTarefa = i[2]
+
                     audio.playSeta()
+                    janelaNumber = 4
                 else:
                     audio.playErro()
+                    janelaNumber = 1002.2
+
         else:            
             if casaTab.trava == 0:
                 SQL.mudarLibCasa(1, idCasa)
@@ -833,7 +835,7 @@ while True:
         
         if SQL.checarResposta(raUsuario, idTarefa) == 0:
             botaoConcTarefa.draw(janela)
-            caixaRespTarefa.draw(janela, 597.5, 300, larguraMax=400)
+            caixaRespTarefa.drawLong(janela, 597.5, 320, 160, larguraMax=600)
 
             if botaoConcTarefa.click():
                 respostaTarefa = caixaRespTarefa.escritaTexto()
@@ -875,6 +877,10 @@ while True:
             audio.playSaida()
         
         for event in pygame.event.get():
+            caixaRespTarefa.digitando(event)
+            caixaRespTarefa.select(event)
+            caixaRespTarefa.textHidden = False
+
             leave(event)
 
     if janelaNumber == 4.1: # aba add user (PROFESSOR ONLY)
@@ -1060,6 +1066,17 @@ while True:
         if botaoOkLogin.click():
             audio.playSeta()
             janelaNumber = 3.1
+
+        for event in pygame.event.get():
+            leave(event)
+
+    if janelaNumber == 1002.2: # erro tarefa inexistente (ALUNO)
+        draw((0, 5, 30))
+        menuErro(f"Erro: Não há tarefa na casa {idCasa}!")
+
+        if botaoOkLogin.click():
+            audio.playSeta()
+            janelaNumber = 2
 
         for event in pygame.event.get():
             leave(event)
