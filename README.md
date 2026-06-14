@@ -32,7 +32,8 @@ python MainPI.py
 - Python 3.13
 - Pygame 2.6.1
 - Pyperclip 1.11.0
-- MySQL 8.0 + MySQL Connector
+- MySQL 8.0
+- MySQL Connector 2.2.9
 
 ## Autores
 | Nome |
