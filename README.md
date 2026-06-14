@@ -16,8 +16,10 @@ Interface gráfica que permite que alunos visualizem e completem atividades em u
 ## Como Rodar
 ### Pré-requisitos
 - Python 3.13
-- MySQL 8.0+
-- Pygame 2.x
+- Pygame 2.6.1
+- Pyperclip 1.11.0
+- MySQL 8.0
+- MySQL Connector 2.2.9
 ### Instalação
 ```bash
 git clone https://github.com/mzchannel/gameficacao-pi-medev.git
