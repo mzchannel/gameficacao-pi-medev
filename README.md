@@ -20,9 +20,9 @@ Interface gráfica que permite que alunos visualizem e completem atividades em u
 - Pygame 2.x
 ### Instalação
 ```bash
-git clone https://github.com/usuario/projeto.git
-cd projeto
-pip install -r requirements.txt
+git clone https://github.com/mzchannel/gameficacao-pi-medev.git
+cd MauaVT
+pip install -r requisitos.txt
 ```
 ### Execução
 ```bash
@@ -30,7 +30,8 @@ python MainPI.py
 ```
 ## Tecnologias
 - Python 3.13
-- Pygame 2.x + Pyperclip
+- Pygame 2.6.1
+- Pyperclip 1.11.0
 - MySQL 8.0 + MySQL Connector
 
 ## Autores
