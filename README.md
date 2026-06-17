@@ -41,8 +41,8 @@ python MainPI.py
 | Nome |
 |------|
 | Murilo Quiqueti (@mzchannel) |
-| Rafael Grespan |
-| Julio Cesar |
+| Rafael Grespan (@RafaelGrespan) |
+| Julio Cesar (@juliocesarcsg) |
 | Enzo Bernardes |
 | Lucas Medeiros |
 | Vitor Pattaro |
