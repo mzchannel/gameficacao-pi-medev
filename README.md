@@ -38,11 +38,11 @@ python MainPI.py
 - MySQL Connector 2.2.9
 
 ## Autores
-| Nome |
+| Nome (Conta GitHub)|
 |------|
-| Murilo Quiqueti (@mzchannel) |
-| Rafael Grespan (@RafaelGrespan) |
-| Julio Cesar (@juliocesarcsg) |
+| Murilo Quiqueti (mzchannel) |
+| Rafael Grespan (RafaelGrespan) |
+| Julio Cesar (juliocesarcsg) |
 | Enzo Bernardes |
 | Lucas Medeiros |
 | Vitor Pattaro |
