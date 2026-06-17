@@ -377,6 +377,8 @@ def desenharAbaTab(tela, tituloAba, pagina, corFundo, corTab, haveSetas=True):
         # setas menu
         botaoSetaE.draw(tela)
         botaoSetaD.draw(tela)
+        textoLoginReq.gerarTexto("Q", janela, 130, 50, (0, 0, 0))
+        textoLoginReq.gerarTexto("E", janela, jan_larg-15, 50, (0, 0, 0))
 
     tabuleiroBase.criarTabuleiro(tela, 597.5, 270, corTab, 10)
 
