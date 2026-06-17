@@ -23,7 +23,7 @@ Interface gráfica que permite que alunos visualizem e completem atividades em u
 ### Instalação
 ```bash
 git clone https://github.com/mzchannel/gameficacao-pi-medev.git
-cd gameficacao-pi-medev
+cd MauaVirtualTabletop
 pip install -r requisitos.txt
 ```
 ### Execução
